@@ -51,7 +51,7 @@ where T: 'static {
                 ptr::null()
             );
             let self_ptr = gobj_ptr as *mut Self;
-            mem::forget(mem::replace(&mut (*self_ptr).value, value));
+            ptr::write(&mut (*self_ptr).value, value);
             GObjectWrapper::<Self>(self_ptr)
         }
     }
@@ -160,9 +160,10 @@ mod test {
     }
 
     #[test]
-    /* Test, with the help of RefcountTestDouble,
-       that drop method is called when dropping the GObjectWrapper<ContainerGObject<T>>
-       instance. */
+    /* Test, with the help of RefcountTestDouble that,
+       gobject refcounting works as expected and
+       drop method is called on the contained value
+       when gobject refcount reaches zero. */
     fn destructed_properly() {
         let ref_count: *mut isize = Box::into_raw(Box::<isize>::new(1));
         let ref_count_dummy = RefCountTestDouble{ref_count};
@@ -175,8 +176,7 @@ mod test {
     }
 
     #[test]
-    /* Cloning GObjectWrapper<ContainerGObject> shouldn't cause the contained
-       type to be cloned. */
+    /* GObject refcounting and dispose() works after cloning. */
     fn clone_destructed_properly() {
         let ref_count: *mut isize = Box::into_raw(Box::<isize>::new(1));
         let ref_count_dummy = RefCountTestDouble{ref_count};
