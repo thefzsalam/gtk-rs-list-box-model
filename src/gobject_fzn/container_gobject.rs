@@ -9,7 +9,7 @@ use std::ffi::CString;
 use std::collections::hash_map::HashMap;
 use std::any::TypeId;
 use self::libc::c_void;
-use super::GObjectWrapper;
+use super::GObjectPtrWrapper;
 
 /* To make any rust type returnable
    from Gtk/GObject related interfaces,
@@ -24,7 +24,7 @@ use super::GObjectWrapper;
    thus the embedded rust instance `value: T`
    lives in the heap.
 
-   The constructor further wraps this in GObjectWrapper
+   The constructor further wraps this in GObjectPtrWrapper
    to facilitate ref counting. */
 #[repr(C)]
 pub struct ContainerGObject<T>
@@ -44,7 +44,7 @@ where T: 'static {
        the GObject type system will call the
        `dispose()` method on this object, which will drop `value`.
     */
-    pub fn new(value: T) -> GObjectWrapper<Self> {
+    pub fn new(value: T) -> GObjectPtrWrapper<Self> {
         unsafe {
             let gobj_ptr = gobject_ffi::g_object_new(
                 Self::get_type(),
@@ -52,7 +52,7 @@ where T: 'static {
             );
             let self_ptr = gobj_ptr as *mut Self;
             ptr::write(&mut (*self_ptr).value, value);
-            GObjectWrapper::<Self>(self_ptr)
+            GObjectPtrWrapper::<Self>(self_ptr)
         }
     }
 
@@ -73,7 +73,7 @@ where T: 'static {
         }
     }
 
-    extern "C" fn get_type() -> glib_ffi::GType {
+    pub extern "C" fn get_type() -> glib_ffi::GType {
         unsafe {
             static mut TYPES_CACHE: Option<HashMap<TypeId, glib_ffi::GType>> = None;
             static mut TYPE_INDEX: usize = 0;

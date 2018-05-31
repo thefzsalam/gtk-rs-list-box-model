@@ -7,9 +7,9 @@ use std::ops::Deref;
    mainly to call g_object_ref and g_object_unref
    in RAII style.
 */
-pub struct GObjectWrapper<T>(pub *mut T);
+pub struct GObjectPtrWrapper<T>(pub *mut T);
 
-impl<T> GObjectWrapper<T> {
+impl<T> GObjectPtrWrapper<T> {
     /* Stop taking care of the GObject associated
        with pointer self.0.
        After calling this method,
@@ -21,20 +21,20 @@ impl<T> GObjectWrapper<T> {
     }
 }
 
-impl<T> Clone for GObjectWrapper<T> {
+impl<T> Clone for GObjectPtrWrapper<T> {
     fn clone(&self) -> Self {
         unsafe {gobject_ffi::g_object_ref(self.0 as *mut gobject_ffi::GObject);}
-        GObjectWrapper::<T>(self.0)
+        GObjectPtrWrapper::<T>(self.0)
     }
 }
 
-impl<T> Drop for GObjectWrapper<T> {
+impl<T> Drop for GObjectPtrWrapper<T> {
     fn drop(&mut self) {
         unsafe {gobject_ffi::g_object_unref(self.0 as *mut gobject_ffi::GObject);}
     }
 }
 
-impl<T> Deref for GObjectWrapper<T> {
+impl<T> Deref for GObjectPtrWrapper<T> {
     type Target = T;
     fn deref(&self) -> &Self::Target {
         unsafe{&*self.0}
