@@ -17,7 +17,7 @@ use super::container_gobject::ContainerGObject;
 /* Wraps any type implementing public_interface::ListBoxModel
    to be passed into the gtk ffi functions which expect GObjects. */
 #[repr(C)]
-struct ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> + 'static {
+pub struct ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> + 'static {
     parent: gobject_ffi::GObject,
     list_box_model: LBM,
     phantom: PhantomData<T>
