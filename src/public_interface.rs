@@ -72,7 +72,7 @@ mod test {
     }
     #[test]
     fn try_creating_a_list_box() {
-        gtk::init();
+        gtk::init().unwrap();
         let list_box = gtk::ListBox::new();
         let my_list = MyList::<String> {
             items: vec![
