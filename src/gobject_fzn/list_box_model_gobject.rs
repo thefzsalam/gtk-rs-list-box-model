@@ -240,8 +240,6 @@ mod test_list_box_functionality {
     use std::ptr;
     use super::super::test_helpers::RefCountTestDouble;
     use super::super::container_gobject::ContainerGObject;
-    use super::super::GObjectPtrWrapper;
-    use super::super::public_interface::ListBoxModel;
     use super::ListBoxModelGObject;
     use self::gtk::prelude::*;
     use self::glib::translate::*;
@@ -323,6 +321,10 @@ mod test_list_box_functionality {
         }
         let window = gtk::Window::new(gtk::WindowType::Toplevel);
         window.add(&list_box);
+        window.connect_delete_event(|_, _| {
+            gtk::main_quit();
+            Inhibit(false)
+        });
         window.show_all();
         gtk::main();
 
