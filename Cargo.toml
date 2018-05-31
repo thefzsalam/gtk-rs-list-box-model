@@ -1,5 +1,5 @@
 [package]
-name = "gtk_list_box_model"
+name = "gtk-rs-list-box-model"
 version = "0.1.0"
 authors = ["Farzeen <12694111+thefzsalam@users.noreply.github.com>"]
 

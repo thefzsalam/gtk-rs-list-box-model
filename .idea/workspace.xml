@@ -54,8 +54,8 @@
       <file leaf-file-name="Cargo.toml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cargo.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="256">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -448,13 +448,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="17" width="1366" height="751" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="right" id="Cargo" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50293684" side_tool="true" weight="0.33817127" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49706313" visible="true" weight="0.33817127" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49706313" weight="0.33817127" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Designer" order="0" />
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17180617" />
@@ -856,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cargo.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="256">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
