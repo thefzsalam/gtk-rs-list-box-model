@@ -1,6 +1,7 @@
 extern crate gobject_sys as gobject_ffi;
 
 use std::ops::Deref;
+use std::mem;
 
 /* A wrapper for pointers returned by
    `g_object_new`,
@@ -17,7 +18,9 @@ impl<T> GObjectPtrWrapper<T> {
        of freeing the resource afterwards.
     */
     pub fn to_glib_full(self) -> *mut T {
-        self.0
+        let to_ret = self.0;
+        mem::forget(self);
+        to_ret
     }
 }
 
