@@ -10,32 +10,32 @@ use std::any::TypeId;
 use std::ffi::CString;
 use std::marker::PhantomData;
 use self::libc::c_void;
-use super::public_interface::ListBoxModel;
+use super::public_interface::ListModel;
 use super::GObjectPtrWrapper;
 use super::container_gobject::ContainerGObject;
 
-/* Wraps any type implementing public_interface::ListBoxModel
+/* Wraps any type implementing public_interface::ListModel
    to be passed into the gtk ffi functions which expect GObjects. */
 #[repr(C)]
-pub struct ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> + 'static {
+pub struct ListModelGObject<T, LM> where T:'static, LM: ListModel<T> + 'static {
     parent: gobject_ffi::GObject,
-    list_box_model: LBM,
+    list_model: LM,
     phantom: PhantomData<T>
 }
 
 #[repr(C)]
-struct ListBoxModelGObjectClass(gobject_ffi::GObjectClass);
+struct ListModelGObjectClass(gobject_ffi::GObjectClass);
 
-impl<T, LBM> ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> +'static {
+impl<T, LM> ListModelGObject<T, LM> where T:'static, LM: ListModel<T> +'static {
 
-    pub fn new(list_box_model: LBM) -> GObjectPtrWrapper<Self> {
+    pub fn new(list_model: LM) -> GObjectPtrWrapper<Self> {
         unsafe {
             let self_gobj_ptr = gobject_ffi::g_object_new(
                 Self::get_type(),
                 ptr::null()
             ) as *mut Self;
 
-            ptr::write(&mut (*self_gobj_ptr).list_box_model, list_box_model);
+            ptr::write(&mut (*self_gobj_ptr).list_model, list_model);
             GObjectPtrWrapper::<Self>(self_gobj_ptr)
         }
     }
@@ -48,7 +48,7 @@ impl<T, LBM> ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> +
     extern "C" fn dispose(gobj_ptr: *mut gobject_ffi::GObject) {
         unsafe {
             let self_ptr = gobj_ptr as *mut Self;
-            ptr::drop_in_place(&mut (*self_ptr).list_box_model);
+            ptr::drop_in_place(&mut (*self_ptr).list_model);
             let parent_class: *mut gobject_ffi::GObjectClass = gobject_ffi::g_type_class_peek_parent(
                 gobject_ffi::g_type_class_peek_static(Self::get_type())
             ) as *mut _;
@@ -67,30 +67,30 @@ impl<T, LBM> ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> +
             }
             let types_cache = TYPES_CACHE.as_mut().unwrap();
 
-            /* Note that TYPES_CACHE caches GType based on LBM,
+            /* Note that TYPES_CACHE caches GType based on LM,
                and not T.
-               If one defines SimpleListBoxModel<T> and ExtraCoolListBoxModel<T>,
+               If one defines SimpleListModel<T> and ExtraCoolListModel<T>,
                using TypeId::of::<T>() to cache the GType will cause conflicts. */
 
-            if let Some(g_type) = types_cache.get(&TypeId::of::<LBM>()) {
+            if let Some(g_type) = types_cache.get(&TypeId::of::<LM>()) {
                 return *g_type;
             }
 
             let type_info = gobject_ffi::GTypeInfo {
-                class_size: mem::size_of::<ListBoxModelGObjectClass>() as u16,
+                class_size: mem::size_of::<ListModelGObjectClass>() as u16,
                 base_init: None,
                 base_finalize: None,
                 class_init: Some(Self::class_init),
                 class_finalize: None,
                 class_data: ptr::null(),
-                instance_size: mem::size_of::<ListBoxModelGObject<T, LBM>>() as u16,
+                instance_size: mem::size_of::<ListModelGObject<T, LM>>() as u16,
                 n_preallocs: 0,
                 instance_init: None,
                 value_table: ptr::null()
             };
 
             // to ensure a unique type_name
-            let type_name = String::from("RustListBoxModelGObject")+&TYPE_INDEX.to_string();
+            let type_name = String::from("RustListModelGObject")+&TYPE_INDEX.to_string();
             TYPE_INDEX += 1;
 
             let type_name_c_string = CString::new(type_name).unwrap();
@@ -116,7 +116,7 @@ impl<T, LBM> ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> +
                 &g_list_model_interface_info
             );
 
-            types_cache.insert(TypeId::of::<LBM>(), g_type);
+            types_cache.insert(TypeId::of::<LM>(), g_type);
             g_type
         }
     }
@@ -137,14 +137,14 @@ impl<T, LBM> ListBoxModelGObject<T, LBM> where T:'static, LBM: ListBoxModel<T> +
     extern "C" fn g_list_model_get_n_items(list_model_ptr: *mut gio_ffi::GListModel) -> u32 {
         let self_ptr = list_model_ptr as *mut Self;
         unsafe {
-            (*self_ptr).list_box_model.get_n_items()
+            (*self_ptr).list_model.get_n_items()
         }
     }
 
     extern "C" fn g_list_model_get_item(list_model_ptr: *mut gio_ffi::GListModel, position: u32) -> glib_ffi::gpointer {
         let self_ptr = list_model_ptr as *mut Self;
         unsafe {
-            let g_obj_ptr_wrapper = ContainerGObject::new((*self_ptr).list_box_model.get_item(position));
+            let g_obj_ptr_wrapper = ContainerGObject::new((*self_ptr).list_model.get_item(position));
             g_obj_ptr_wrapper.to_glib_full() as *mut _
         }
     }
@@ -159,7 +159,7 @@ mod test_object_creation {
 
     use super::super::test_helpers::RefCountTestDouble;
 
-    impl super::ListBoxModel<u8> for RefCountTestDouble {
+    impl super::ListModel<u8> for RefCountTestDouble {
         fn get_n_items(&self) -> u32 {unimplemented!()}
         fn get_item(&self, _index: u32) -> u8 {unimplemented!()}
     }
@@ -169,29 +169,29 @@ mod test_object_creation {
        If mistakes are made in GObject registration code,
        SIGSEGV awaits you. */
     fn construction_works() {
-        struct U8LBM();
-        impl super::ListBoxModel<u8> for U8LBM {
+        struct U8LM();
+        impl super::ListModel<u8> for U8LM {
             fn get_n_items(&self) -> u32 {0}
             fn get_item(&self, _index: u32) -> u8 {unimplemented!()}
         }
-        let _lbm_gobj = super::ListBoxModelGObject::new(U8LBM());
+        let _lbm_gobj = super::ListModelGObject::new(U8LM());
     }
 
     #[test]
     /* Make sure that get_type::<T>() registers different types for different values of T. */
     fn multiple_type_construction_works() {
-        struct StringLBM();
-        struct U8LBM();
-        impl super::ListBoxModel<String> for StringLBM {
+        struct StringLM();
+        struct U8LM();
+        impl super::ListModel<String> for StringLM {
             fn get_n_items(&self) -> u32 {unimplemented!()}
             fn get_item(&self, _index: u32) -> String {unimplemented!()}
         }
-        impl super::ListBoxModel<u8> for U8LBM {
+        impl super::ListModel<u8> for U8LM {
             fn get_n_items(&self) -> u32 {unimplemented!()}
             fn get_item(&self, _index: u32) -> u8 {unimplemented!()}
         }
-        let _lbm_string_gobj = super::ListBoxModelGObject::new(StringLBM());
-        let _lbm_u8_gobj = super::ListBoxModelGObject::new(U8LBM());
+        let _lbm_string_gobj = super::ListModelGObject::new(StringLM());
+        let _lbm_u8_gobj = super::ListModelGObject::new(U8LM());
     }
 
     #[test]
@@ -203,7 +203,7 @@ mod test_object_creation {
         let ref_count_dummy = RefCountTestDouble{ref_count};
         {
             unsafe{assert_eq!(*ref_count,1);}
-            let _ptr_object = super::ListBoxModelGObject::new(ref_count_dummy);
+            let _ptr_object = super::ListModelGObject::new(ref_count_dummy);
             unsafe{assert_eq!(*ref_count,1);}
         }
         unsafe{assert_eq!(*ref_count,0);}
@@ -217,7 +217,7 @@ mod test_object_creation {
         let ref_count_dummy = RefCountTestDouble{ref_count};
         {
             unsafe{assert_eq!(*ref_count,1);}
-            let _ptr_object1 = super::ListBoxModelGObject::new(ref_count_dummy);
+            let _ptr_object1 = super::ListModelGObject::new(ref_count_dummy);
             let _ptr_object2 = _ptr_object1.clone();
             let _ptr_object3 = _ptr_object2.clone();
             let _ptr_object4 = _ptr_object3.clone();
@@ -240,7 +240,7 @@ mod test_list_box_functionality {
     use std::ptr;
     use super::super::test_helpers::RefCountTestDouble;
     use super::super::container_gobject::ContainerGObject;
-    use super::ListBoxModelGObject;
+    use super::ListModelGObject;
     use self::gtk::prelude::*;
     use self::glib::translate::*;
 
@@ -250,17 +250,17 @@ mod test_list_box_functionality {
         value: String
     }
 
-    struct ListBoxModelTestImpl {
+    struct ListModelTestImpl {
         item: StringListItem
     }
 
-    impl super::ListBoxModel<StringListItem> for ListBoxModelTestImpl {
+    impl super::ListModel<StringListItem> for ListModelTestImpl {
         fn get_n_items(&self) -> u32 {
             1
         }
         fn get_item(&self, index: u32) -> StringListItem {
             if index == 0 {self.item.clone()}
-            else { panic!("Index out of bounds: ListBoxModelTestImpl"); }
+            else { panic!("Index out of bounds: ListModelTestImpl"); }
         }
     }
 
@@ -279,16 +279,16 @@ mod test_list_box_functionality {
     #[test]
     fn g_is_list_model() {
         let mut ref_count = 0 as isize;
-        let list_box_model_gobj = ListBoxModelGObject::<StringListItem, ListBoxModelTestImpl>::new(ListBoxModelTestImpl {
+        let list_model_gobj = ListModelGObject::<StringListItem, ListModelTestImpl>::new(ListModelTestImpl {
             item: StringListItem {
                 obj_count: RefCountTestDouble {ref_count: &mut ref_count as *mut _},
                 value: String::from("Hello World!")
             }
         });
         unsafe {
-            let instance_ptr = list_box_model_gobj.to_glib_full();
+            let instance_ptr = list_model_gobj.to_glib_full();
             assert_eq!(gobject_ffi::g_type_check_instance_is_a(instance_ptr as *mut _,
-                                                               ListBoxModelGObject::<StringListItem, ListBoxModelTestImpl>::get_type()),
+                                                               ListModelGObject::<StringListItem, ListModelTestImpl>::get_type()),
                        1
             );
             assert_eq!(gobject_ffi::g_type_check_instance_is_a(instance_ptr as *mut _,
@@ -306,7 +306,7 @@ mod test_list_box_functionality {
         gtk::init().unwrap();
         let list_box = gtk::ListBox::new();
         let mut ref_count = 0 as isize;
-        let list_box_model_gobj = ListBoxModelGObject::new(ListBoxModelTestImpl {
+        let list_model_gobj = ListModelGObject::new(ListModelTestImpl {
             item: StringListItem {
                 obj_count: RefCountTestDouble {ref_count: &mut ref_count as *mut _},
                 value: String::from("Hello World!")
@@ -314,7 +314,7 @@ mod test_list_box_functionality {
         });
         unsafe {
             gtk_ffi::gtk_list_box_bind_model(list_box.to_glib_none().0,
-                                             list_box_model_gobj.to_glib_full() as *mut _,
+                                             list_model_gobj.to_glib_full() as *mut _,
                                              Some(create_widget),
                                              ptr::null_mut(),
                                              None);

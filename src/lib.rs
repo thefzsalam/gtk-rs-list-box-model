@@ -1,7 +1,7 @@
 mod public_interface;
 mod gobject_ptr_wrapper;
 mod container_gobject;
-mod list_box_model_gobject;
+mod list_model_gobject;
 mod test_helpers;
 
 

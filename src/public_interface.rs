@@ -6,20 +6,20 @@ extern crate glib;
 
 use self::glib::translate::*;
 use std::mem;
-use super::list_box_model_gobject::ListBoxModelGObject;
+use super::list_model_gobject::ListModelGObject;
 use super::container_gobject::ContainerGObject;
 
 
-pub trait ListBoxModel<T> {
+pub trait ListModel<T> {
     fn get_n_items(&self) -> u32;
     fn get_item(&self, index: u32) -> T;
 }
 
 /* Shall I turn this into a trait and implement it on gtk::ListBox ? */
-pub fn gtk_list_box_bind_model<T, LBM, WC>(list_box: &gtk::ListBox,
-                                       list_box_model: LBM,
-                                       widget_creator: WC )
-where T:'static, LBM: ListBoxModel<T>+'static, WC: Fn(&T)->gtk::Widget   {
+pub fn gtk_list_box_bind_model<T, LM, WC>(list_box: &gtk::ListBox,
+                                          list_model: LM,
+                                          widget_creator: WC )
+where T:'static, LM: ListModel<T>+'static, WC: Fn(&T)->gtk::Widget   {
 
     extern "C" fn create_widget<T, WC> (item: *mut gobject_ffi::GObject, user_data: glib_ffi::gpointer)
                                         -> *mut gtk_ffi::GtkWidget
@@ -36,7 +36,7 @@ where T:'static, LBM: ListBoxModel<T>+'static, WC: Fn(&T)->gtk::Widget   {
     unsafe {
         gtk_ffi::gtk_list_box_bind_model(
             list_box.to_glib_none().0,
-            ListBoxModelGObject::new(list_box_model).to_glib_full() as *mut _,
+            ListModelGObject::new(list_model).to_glib_full() as *mut _,
             Some(create_widget::<T, WC>),
             Box::into_raw(Box::from(widget_creator))  as glib_ffi::gpointer,
             Some(user_data_free_func::<WC>)
@@ -55,7 +55,7 @@ mod test {
     struct MyList<T> {
         items: Vec<T>
     }
-    impl<T: Clone> super::ListBoxModel<T> for MyList<T> {
+    impl<T: Clone> super::ListModel<T> for MyList<T> {
         fn get_n_items(&self) -> u32 {
             self.items.len() as _
         }
