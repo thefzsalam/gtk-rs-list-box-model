@@ -1,0 +1,17 @@
+[package]
+name = "gtk_list_box_model"
+version = "0.1.0"
+authors = ["Farzeen <12694111+thefzsalam@users.noreply.github.com>"]
+
+[lib]
+test = true
+
+[dependencies]
+gtk = {version = "0.4.0", features=["v3_22"]}
+gio = "0.4.0"
+gtk-sys = "0.6.0"
+gobject-sys = "0.6.0"
+glib-sys = "0.6.0"
+gio-sys = "0.6.0"
+libc = "0.2.41"
+glib = "0.5.0"

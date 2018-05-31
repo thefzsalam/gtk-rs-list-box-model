@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e96f4acf-3c00-4ed4-8dfd-9f9a8b1a2cb2" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="list_model_gobject.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/list_model_gobject.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="container_gobject.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container_gobject.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+              <folding>
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1741#1742#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public_interface.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+              <folding>
+                <element signature="n#!!block;n#MyList#0;n#test#0" />
+                <element signature="e#1929#1930#0" expanded="true" />
+                <element signature="e#1967#1968#0" expanded="true" />
+                <element signature="e#2014#2015#0" expanded="true" />
+                <element signature="e#2054#2055#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cargo.toml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cargo.toml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtk_list_box_model.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gtk_list_box_model.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="lib.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/glib-sys-0.6.0/src/lib.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1176" column="9" selection-start-line="1176" selection-start-column="9" selection-end-line="1176" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gobject_ptr_wrapper.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gobject_ptr_wrapper.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_helpers.rs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test_helpers.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GtkWidget</find>
+      <find>::Widget</find>
+      <find>Clone</find>
+      <find>macro</find>
+      <find>DummyObject</find>
+      <find>test_dummy_obj</find>
+      <find>wrap</find>
+      <find>Drop</find>
+      <find>from_nam</find>
+      <find>mod</find>
+      <find>get_ty</find>
+      <find>print</find>
+      <find>RefcountDummy</find>
+      <find>RefCountMock</find>
+      <find>gobj_new_from_ptr</find>
+      <find>ptr</find>
+      <find>PtrGObject</find>
+      <find>ptr_gobj</find>
+      <find>new</find>
+      <find>libc</find>
+      <find>c_void</find>
+      <find>get_typ</find>
+      <find>printl</find>
+      <find>GObjectWrapper</find>
+      <find>glib</find>
+      <find>LBM</find>
+      <find>Lis</find>
+      <find>ListBoxModel</find>
+      <find>Widget::</find>
+      <find>list_box_model</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>from_ptr</replace>
+      <replace>test_refcount_dummy</replace>
+      <replace>RefCountMock</replace>
+      <replace>RefCountTestDouble</replace>
+      <replace>new_by_moving_to_heap</replace>
+      <replace>ContainerGObject</replace>
+      <replace>container_gobj</replace>
+      <replace>new</replace>
+      <replace>GObjectPtrWrapper</replace>
+      <replace>LM</replace>
+      <replace>ListModel</replace>
+      <replace>list_model</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/gobject_fzn/ListBoxModel.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/glue.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/gobject.rs" />
+        <option value="$PROJECT_DIR$/src/main.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model_gobj.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/ptr_gobject.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/gobject_wrapper.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/mod.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/test_helpers.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/gobject_ptr_wrapper.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/container_gobject.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/public_interface.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/list_box_model_gobject.rs" />
+        <option value="$PROJECT_DIR$/src/gobject_fzn/lib.rs" />
+        <option value="$PROJECT_DIR$/src/list_box_model_gobject.rs" />
+        <option value="$PROJECT_DIR$/src/lib.rs" />
+        <option value="$PROJECT_DIR$/src/public_interface.rs" />
+        <option value="$PROJECT_DIR$/src/list_model_gobject.rs" />
+        <option value="$PROJECT_DIR$/Cargo.toml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="17" />
+    <option name="width" value="1366" />
+    <option name="height" value="751" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gtk_list_box_bind_model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtk_list_box_bind_model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtk_list_box_bind_model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtk_list_box_bind_model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Cargo Command.Test public_interface::test">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Run all tests sequentially" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test -- --test-threads=1" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="Test gobject_fzn::ptr_gobject::test::clone_destructed_properly" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package gtk_list_box_bind_model --bin gtk_list_box_bind_model gobject_fzn::ptr_gobject::test::clone_destructed_properly -- --exact" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="Test gobject_fzn::ptr_gobject::test::destructed_properly" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package gtk_list_box_bind_model --bin gtk_list_box_bind_model gobject_fzn::ptr_gobject::test::destructed_properly -- --exact" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="Test gobject_fzn::ptr_gobject::test::test_dummy_obj" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package gtk_list_box_bind_model --bin gtk_list_box_bind_model gobject_fzn::ptr_gobject::test::test_dummy_obj -- --exact" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="Test public_interface::test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package gtk_list_box_model public_interface::test" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="Test test_list_box_functionality" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package gtk_list_box_bind_model --bin gtk_list_box_bind_model gobject_fzn::list_box_model_gobject::test_list_box_functionality" />
+      <option name="nocapture" value="true" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <list>
+      <item itemvalue="Cargo Command.Run all tests sequentially" />
+      <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::destructed_properly" />
+      <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::test_dummy_obj" />
+      <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::clone_destructed_properly" />
+      <item itemvalue="Cargo Command.Test test_list_box_functionality" />
+      <item itemvalue="Cargo Command.Test public_interface::test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Test public_interface::test" />
+        <item itemvalue="Cargo Command.Test test_list_box_functionality" />
+        <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::clone_destructed_properly" />
+        <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::test_dummy_obj" />
+        <item itemvalue="Cargo Command.Test gobject_fzn::ptr_gobject::test::destructed_properly" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e96f4acf-3c00-4ed4-8dfd-9f9a8b1a2cb2" name="Default" comment="" />
+      <created>1527247378359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527247378359</updated>
+    </task>
+    <task id="LOCAL-00001" summary="GObjectWrapper:&#10;Calls g_object_ref/g_object_unref when cloning/dropping&#10;in RAII style on the associated pointer returned by g_object_new().">
+      <created>1527599986160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527599986160</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ContainerGObject:&#10;To make any rust type returnable from Gtk/GObject related APIs,&#10;which allow only types registered by GObject system to be returned.&#10;For example, to implemented GListModel for GtkListBox.">
+      <created>1527603448359</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527603448359</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Replaced `mem::forget(mem::replace(..,..));` with `ptr::write(..,..);`.&#10;&#10;Improved comments on test cases.">
+      <created>1527662156593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527662156593</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ListBoxModelGObject:&#10;Wraps any type implementing public_interface::ListBoxModel&#10;for passing into gtk ffi functions which expects GObjects.&#10;&#10;Basic GObject implementation complete.&#10;TODO implement GListModel interface.">
+      <created>1527727638931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527727638932</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Renamed GObjectWrapper to GObjectPtrWrapper, &#10;as I frequently mix up ContainerGObject and GObjectWrapper.">
+      <created>1527752981492</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527752981492</updated>
+    </task>
+    <task id="LOCAL-00006" summary="GObjectPtrWrapper:&#10;Fixed a bug which caused to call g_object_unref on wrapped pointer&#10;when calling `to_glib_full()`">
+      <created>1527772668280</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527772668280</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ListBoxModelGObject:&#10;Completed the GObject binding.&#10;Added some tests. Tests pass.&#10;&#10;Notable things:&#10; * item_ptr was unrefed from create_widget function. This caused segfaults.&#10; * Unnecessarily wrapping the recieved item_ptr in GObjectPtrWrapper caused&#10;   the above problem.&#10;   *** Only wrap &quot;transfer full&quot; pointers in GObjectPtrWrapper. ***&#10;   We don't want to unref &quot;transfer none&quot; pointers.  &#10; * `CString::new(&quot;foo&quot;).unwrap().as_ptr()` is undefined behaviour.&#10;   The `CString` instance will go out of scope by the end of the expression.&#10;   Which means, the pointer returned by as_ptr() will be a dangling pointer.&#10;   This didn't cause any segfault for me yet. But has the potential to do so.&#10;   Would have wasted hours in the future, had the compiler not pointed out.  &#10;&#10;&#10;The RefcountTestDouble is moved to test_helpers.rs&#10;which will be in the next commit.">
+      <created>1527775888573</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527775888573</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ContainerGObject:&#10;Added a `get(&amp;self) -&gt; &amp;T` method to get an immutable&#10;reference to the contained value.">
+      <created>1527775962155</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527775962155</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Moved RefCountTestDouble to test_helpers.rs.">
+      <created>1527776103368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527776103368</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Made ListBoxModelGObject public.">
+      <created>1527778318909</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527778318909</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Removed unnecessary imports.&#10;The gui based test case is now considered as passed when the window&#10;is closed without having a segfault.">
+      <created>1527780653140</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527780653140</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Finally, I did it. :)&#10;API completed.&#10;&#10;Huge thanks goes to Sebastian Dröge (@sdroege),&#10;for his guidance. I almost gave up on the entire GObject&#10;ecosystem more than once when I got really stuck.&#10;Without his help, I would have stopped there.&#10;&#10;Here's one of his awesome blog posts that helped me:&#10;https://coaxion.net/blog/2017/09/exporting-a-gobject-c-api-from-rust-code-and-using-it-from-c-python-javascript-and-others/&#10;&#10;Here's his GObject Subclass library which is really cool but I don't understand it's working completely, yet :)&#10;https://github.com/sdroege/gobject-subclass&#10;&#10;Thanks to @oknf from Matrix, who also helps people at `gtk-rs` channel in Gitter.&#10;Thanks to everyone at gtk-rs and rust-lang in Gitter and #rust, #rust-beginners on Moznet IRC for your help.&#10;Rust is a (positively) difficult language to grasp at first. &#10;Without the awesome community, it would have been much much harder.">
+      <created>1527781258383</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527781258383</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Moved src/gobject_fzn/*.rs to src/*.rs&#10;Removed src/gobject_fzn/mod.rs to src/lib.rs">
+      <created>1527781693888</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527781693888</updated>
+    </task>
+    <task id="LOCAL-00014" summary="gtk::init() --&gt; gtk::init().unwrap()">
+      <created>1527782749878</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527782749878</updated>
+    </task>
+    <task id="LOCAL-00015" summary="I should really revise the Rust book chapter explaining `use` and `mod` :/">
+      <created>1527782805091</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527782805091</updated>
+    </task>
+    <task id="LOCAL-00016" summary="I should really revise the Rust book chapter explaining `use` and `mod` :/">
+      <created>1527782820348</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1527782820348</updated>
+    </task>
+    <task id="LOCAL-00017" summary="I had mistyped ListModel as ListBoxModel.&#10;Fixed that.">
+      <created>1527783425657</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527783425657</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="17" width="1366" height="751" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Cargo" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50293684" side_tool="true" weight="0.33817127" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49706313" visible="true" weight="0.33817127" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Designer" order="0" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17180617" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3280116" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4992658" weight="0.3280116" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49706313" visible="true" weight="0.3280116" />
+      <window_info anchor="right" id="Cargo" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.10499266" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50293684" side_tool="true" weight="0.3280116" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3280116" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4992658" weight="0.3280116" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="GObjectWrapper:&#10;Calls g_object_ref/g_object_unref when cloning/dropping&#10;in RAII style on the associated pointer returned by g_object_new()." />
+    <MESSAGE value="ContainerGObject:&#10;To make any rust type returnable from Gtk/GObject related APIs,&#10;which allow only types registered by GObject system to be returned.&#10;For example, to implemented GListModel for GtkListBox." />
+    <MESSAGE value="Replaced `mem::forget(mem::replace(..,..));` with `ptr::write(..,..);`.&#10;&#10;Improved comments on test cases." />
+    <MESSAGE value="ListBoxModelGObject:&#10;Wraps any type implementing public_interface::ListBoxModel&#10;for passing into gtk ffi functions which expects GObjects.&#10;&#10;Basic GObject implementation complete.&#10;TODO implement GListModel interface." />
+    <MESSAGE value="Renamed GObjectWrapper to GObjectPtrWrapper, &#10;as I frequently mix up ContainerGObject and GObjectWrapper." />
+    <MESSAGE value="GObjectPtrWrapper:&#10;Fixed a bug which caused to call g_object_unref on wrapped pointer&#10;when calling `to_glib_full()`" />
+    <MESSAGE value="ListBoxModelGObject:&#10;Completed the GObject binding.&#10;Added some tests. Tests pass.&#10;&#10;Notable things:&#10; * item_ptr was unrefed from create_widget function. This caused segfaults.&#10; * Unnecessarily wrapping the recieved item_ptr in GObjectPtrWrapper caused&#10;   the above problem.&#10;   *** Only wrap &quot;transfer full&quot; pointers in GObjectPtrWrapper. ***&#10;   We don't want to unref &quot;transfer none&quot; pointers.  &#10; * `CString::new(&quot;foo&quot;).unwrap().as_ptr()` is undefined behaviour.&#10;   The `CString` instance will go out of scope by the end of the expression.&#10;   Which means, the pointer returned by as_ptr() will be a dangling pointer.&#10;   This didn't cause any segfault for me yet. But has the potential to do so.&#10;   Would have wasted hours in the future, had the compiler not pointed out.  &#10;&#10;&#10;The RefcountTestDouble is moved to test_helpers.rs&#10;which will be in the next commit." />
+    <MESSAGE value="ContainerGObject:&#10;Added a `get(&amp;self) -&gt; &amp;T` method to get an immutable&#10;reference to the contained value." />
+    <MESSAGE value="Moved RefCountTestDouble to test_helpers.rs." />
+    <MESSAGE value="Made ListBoxModelGObject public." />
+    <MESSAGE value="Removed unnecessary imports.&#10;The gui based test case is now considered as passed when the window&#10;is closed without having a segfault." />
+    <MESSAGE value="Finally, I did it. :)&#10;API completed.&#10;&#10;Huge thanks goes to Sebastian Dröge (@sdroege),&#10;for his guidance. I almost gave up on the entire GObject&#10;ecosystem more than once when I got really stuck.&#10;Without his help, I would have stopped there.&#10;&#10;Here's one of his awesome blog posts that helped me:&#10;https://coaxion.net/blog/2017/09/exporting-a-gobject-c-api-from-rust-code-and-using-it-from-c-python-javascript-and-others/&#10;&#10;Here's his GObject Subclass library which is really cool but I don't understand it's working completely, yet :)&#10;https://github.com/sdroege/gobject-subclass&#10;&#10;Thanks to @oknf from Matrix, who also helps people at `gtk-rs` channel in Gitter.&#10;Thanks to everyone at gtk-rs and rust-lang in Gitter and #rust, #rust-beginners on Moznet IRC for your help.&#10;Rust is a (positively) difficult language to grasp at first. &#10;Without the awesome community, it would have been much much harder." />
+    <MESSAGE value="Moved src/gobject_fzn/*.rs to src/*.rs&#10;Removed src/gobject_fzn/mod.rs to src/lib.rs" />
+    <MESSAGE value="gtk::init() --&gt; gtk::init().unwrap()" />
+    <MESSAGE value="I should really revise the Rust book chapter explaining `use` and `mod` :/" />
+    <MESSAGE value="I had mistyped ListModel as ListBoxModel.&#10;Fixed that." />
+    <option name="LAST_COMMIT_MESSAGE" value="I had mistyped ListModel as ListBoxModel.&#10;Fixed that." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/gobject_ptr_wrapper.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gobject-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26026">
+          <caret line="1859" column="54" selection-start-line="1859" selection-start-column="54" selection-end-line="1859" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model_gobj.rs" />
+    <entry file="file://$PROJECT_DIR$/src/container_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11732">
+          <caret line="838" column="24" lean-forward="true" selection-start-line="838" selection-start-column="24" selection-end-line="838" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186578">
+          <caret line="13327" column="35" lean-forward="true" selection-start-line="13327" selection-start-column="35" selection-end-line="13327" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gobject-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12684">
+          <caret line="906" column="5" lean-forward="true" selection-start-line="906" selection-start-column="5" selection-end-line="906" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/widget.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1792">
+          <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list_model_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model_gobj.rs" />
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list_model_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model_gobj.rs" />
+    <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/glib-0.5.0/src/wrapper.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1358">
+          <caret line="254" column="20" selection-start-line="254" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="152" column="7" selection-start-line="152" selection-start-column="2" selection-end-line="152" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="838" column="24" selection-start-line="838" selection-start-column="24" selection-end-line="838" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/widget.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gobject_fzn/raw_list_box_model_gobj.rs" />
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gobject-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="278" column="9" selection-start-line="278" selection-start-column="9" selection-end-line="278" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gio-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="3199" column="11" selection-start-line="3199" selection-start-column="11" selection-end-line="3199" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/window.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.4.1/src/auto/enums.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="5961" column="9" selection-start-line="5961" selection-start-column="9" selection-end-line="5961" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_helpers.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/option.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gobject_ptr_wrapper.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/glib-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1176" column="9" selection-start-line="1176" selection-start-column="9" selection-end-line="1176" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-sys-0.6.0/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16855" column="4" selection-start-line="16855" selection-start-column="4" selection-end-line="16855" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/glib-0.5.0/src/object.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+          <folding>
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtk_list_box_model.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public_interface.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding>
+            <element signature="n#!!block;n#MyList#0;n#test#0" />
+            <element signature="e#1929#1930#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2054#2055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list_model_gobject.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
