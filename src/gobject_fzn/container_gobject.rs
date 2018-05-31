@@ -56,6 +56,10 @@ where T: 'static {
         }
     }
 
+    pub fn get(&self) -> &T {
+        &self.value
+    }
+
     extern "C" fn class_init(klass_ptr: *mut c_void, _data: *mut c_void) {
         let klass_ptr = klass_ptr as *mut gobject_ffi::GObjectClass;
         unsafe { (*klass_ptr).dispose = Some(Self::dispose); }
